@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>姚雪城</title>
+  <subtitle>博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://yxuecheng.github.io/"/>
+  <updated>2017-02-13T13:40:20.000Z</updated>
+  <id>https://yxuecheng.github.io/</id>
+  
+  <author>
+    <name>姚雪城</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git 常用命令</title>
+    <link href="https://yxuecheng.github.io/2017/02/13/git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://yxuecheng.github.io/2017/02/13/git-常用命令/</id>
+    <published>2017-02-13T13:37:49.000Z</published>
+    <updated>2017-02-13T13:40:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>git 常用命令<br><a id="more"></a></p>
+<p>git 如何删除本地创建的仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//删除文件夹下的所有 .git 文件</div><div class="line">find . -name <span class="string">".git"</span> | xargs rm -Rf</div></pre></td></tr></table></figure></p>
+<p>提示出错信息：fatal: remote origin already exists 解决办法如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git remote rm origin</div><div class="line">$ git remote add origin git@github.com:djqiang/gitdemo.git</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;git 常用命令&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yxuecheng.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="git" scheme="https://yxuecheng.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端模块化</title>
+    <link href="https://yxuecheng.github.io/2017/02/13/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    <id>https://yxuecheng.github.io/2017/02/13/前端模块化/</id>
+    <published>2017-02-12T18:15:37.000Z</published>
+    <updated>2017-02-12T18:25:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>前端模块化<br>这篇文章很好，看了好多遍，转过来以后不会迷路了<br><a id="more"></a><br>在JavaScript发展初期就是为了实现简单的页面交互逻辑，寥寥数语即可；如今CPU、浏览器性能得到了极大的提升，很多页面逻辑迁移到了客户端（表单验证等），随着web2.0时代的到来，Ajax技术得到广泛应用，jQuery等前端库层出不穷，前端代码日益膨胀</p>
+<p>这时候JavaScript作为嵌入式的脚本语言的定位动摇了，JavaScript却没有为组织代码提供任何明显帮助，甚至没有类的概念，更不用说模块（module）了，JavaScript极其简单的代码组织规范不足以驾驭如此庞大规模的代码</p>
+<h1 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h1><p>既然JavaScript不能handle如此大规模的代码，我们可以借鉴一下其它语言是怎么处理大规模程序设计的，在Java中有一个重要带概念——package，逻辑上相关的代码组织到同一个包内，包内是一个相对独立的王国，不用担心命名冲突什么的，那么外部如果使用呢？直接import对应的package即可</p>
+<p>import java.util.ArrayList;<br>遗憾的是JavaScript在设计时定位原因，没有提供类似的功能，开发者需要模拟出类似的功能，来隔离、组织复杂的JavaScript代码，我们称为模块化。</p>
+<p>一个模块就是实现特定功能的文件，有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块。模块开发需要遵循一定的规范，各行其是就都乱套了</p>
+<p>规范形成的过程是痛苦的，前端的先驱在刀耕火种、茹毛饮血的阶段开始，发展到现在初具规模，简单了解一下这段不凡的历程</p>
+<h2 id="函数封装"><a href="#函数封装" class="headerlink" title="函数封装"></a>函数封装</h2><p>我们在讲函数的时候提到，函数一个功能就是实现特定逻辑的一组语句打包，而且JavaScript的作用域就是基于函数的，所以把函数作为模块化的第一步是很自然的事情，在一个文件里面编写几个相关函数就是最开始的模块了</p>
+<p>function fn1(){<br>    statement<br>}</p>
+<p>function fn2(){<br>    statement<br>}<br>这样在需要的以后夹在函数所在文件，调用函数就可以了</p>
+<p>这种做法的缺点很明显：污染了全局变量，无法保证不与其他模块发生变量名冲突，而且模块成员之间没什么关系。</p>
+<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p>为了解决上面问题，对象的写法应运而生，可以把所有的模块成员封装在一个对象中</p>
+<p>var myModule = {<br>    var1: 1,</p>
+<pre><code>var2: 2,
+
+fn1: function(){
+
+},
+
+fn2: function(){
+
+}
+</code></pre><p>}<br>这样我们在希望调用模块的时候引用对应文件，然后</p>
+<p>myModule.fn2();<br>这样避免了变量污染，只要保证模块名唯一即可，同时同一模块内的成员也有了关系</p>
+<p>看似不错的解决方案，但是也有缺陷，外部可以随意修改内部成员</p>
+<p>myModel.var1 = 100;<br>这样就会产生意外的安全问题</p>
+<h2 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h2><p>可以通过立即执行函数，来达到隐藏细节的目的</p>
+<p>var myModule = (function(){<br>    var var1 = 1;<br>    var var2 = 2;</p>
+<pre><code>function fn1(){
+
+}
+
+function fn2(){
+
+}
+
+return {
+    fn1: fn1,
+    fn2: fn2
+};
+</code></pre><p>})();<br>这样在模块外部无法修改我们没有暴露出来的变量、函数</p>
+<p>上述做法就是我们模块化的基础，目前，通行的JavaScript模块规范主要有两种：CommonJS和AMD</p>
+<h2 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h2><p>我们先从CommonJS谈起，因为在网页端没有模块化编程只是页面JavaScript逻辑复杂，但也可以工作下去，在服务器端却一定要有模块，所以虽然JavaScript在web端发展这么多年，第一个流行的模块化规范却由服务器端的JavaScript应用带来，CommonJS规范是由NodeJS发扬光大，这标志着JavaScript模块化编程正式登上舞台。</p>
+<h3 id="定义模块"><a href="#定义模块" class="headerlink" title="定义模块"></a>定义模块</h3><p>根据CommonJS规范，一个单独的文件就是一个模块。每一个模块都是一个单独的作用域，也就是说，在该模块内部定义的变量，无法被其他模块读取，除非定义为global对象的属性</p>
+<h3 id="模块输出："><a href="#模块输出：" class="headerlink" title="模块输出："></a>模块输出：</h3><p>模块只有一个出口，module.exports对象，我们需要把模块希望输出的内容放入该对象</p>
+<h3 id="加载模块："><a href="#加载模块：" class="headerlink" title="加载模块："></a>加载模块：</h3><p>加载模块使用require方法，该方法读取一个文件并执行，返回文件内部的module.exports对象</p>
+<p>看个例子</p>
+<p>//模块定义 myModel.js</p>
+<p>var name = ‘Byron’;</p>
+<p>function printName(){<br>    console.log(name);<br>}</p>
+<p>function printFullName(firstName){<br>    console.log(firstName + name);<br>}</p>
+<p>module.exports = {<br>    printName: printName,<br>    printFullName: printFullName<br>}</p>
+<p>//加载模块</p>
+<p>var nameModule = require(‘./myModel.js’);</p>
+<p>nameModule.printName();<br>不同的实现对require时的路径有不同要求，一般情况可以省略js拓展名，可以使用相对路径，也可以使用绝对路径，甚至可以省略路径直接使用模块名（前提是该模块是系统内置模块）</p>
+<p>尴尬的浏览器<br>仔细看上面的代码，会发现require是同步的。模块系统需要同步读取模块文件内容，并编译执行以得到模块接口。</p>
+<p>这在服务器端实现很简单，也很自然，然而， 想在浏览器端实现问题却很多。</p>
+<p>浏览器端，加载JavaScript最佳、最容易的方式是在document中插入script 标签。但脚本标签天生异步，传统CommonJS模块在浏览器环境中无法正常加载。</p>
+<p>解决思路之一是，开发一个服务器端组件，对模块代码作静态分析，将模块与它的依赖列表一起返回给浏览器端。 这很好使，但需要服务器安装额外的组件，并因此要调整一系列底层架构。</p>
+<p>另一种解决思路是，用一套标准模板来封装模块定义，但是对于模块应该怎么定义和怎么加载，又产生的分歧：</p>
+<h2 id="AMD"><a href="#AMD" class="headerlink" title="AMD"></a>AMD</h2><p>AMD 即Asynchronous Module Definition，中文名是异步模块定义的意思。它是一个在浏览器端模块化开发的规范</p>
+<p>由于不是JavaScript原生支持，使用AMD规范进行页面开发需要用到对应的库函数，也就是大名鼎鼎RequireJS，实际上AMD 是 RequireJS 在推广过程中对模块定义的规范化的产出</p>
+<p>requireJS主要解决两个问题</p>
+<p>多个js文件可能有依赖关系，被依赖的文件需要早于依赖它的文件加载到浏览器<br>js加载的时候浏览器会停止页面渲染，加载文件越多，页面失去响应时间越长<br>看一个使用requireJS的例子</p>
+<p>// 定义模块 myModule.js<br>define([‘dependency’], function(){<br>    var name = ‘Byron’;<br>    function printName(){<br>        console.log(name);<br>    }</p>
+<pre><code>return {
+    printName: printName
+};
+</code></pre><p>});</p>
+<p>// 加载模块<br>require([‘myModule’], function (my){<br>　 my.printName();<br>});</p>
+<p>语法</p>
+<p>requireJS定义了一个函数 define，它是全局变量，用来定义模块</p>
+<p>define(id?, dependencies?, factory);<br>id：可选参数，用来定义模块的标识，如果没有提供该参数，脚本文件名（去掉拓展名）<br>dependencies：是一个当前模块依赖的模块名称数组<br>factory：工厂方法，模块初始化要执行的函数或对象。如果为函数，它应该只被执行一次。如果是对象，此对象应该为模块的输出值<br>在页面上使用require函数加载模块</p>
+<p>require([dependencies], function(){});<br>require()函数接受两个参数</p>
+<p>第一个参数是一个数组，表示所依赖的模块<br>第二个参数是一个回调函数，当前面指定的模块都加载成功后，它将被调用。加载的模块会以参数形式传入该函数，从而在回调函数内部就可以使用这些模块<br>require()函数在加载依赖的函数的时候是异步加载的，这样浏览器不会失去响应，它指定的回调函数，只有前面的模块都加载成功后，才会运行，解决了依赖性的问题。</p>
+<h2 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h2><p>CMD 即Common Module Definition通用模块定义，CMD规范是国内发展出来的，就像AMD有个requireJS，CMD有个浏览器的实现SeaJS，SeaJS要解决的问题和requireJS一样，只不过在模块定义方式和模块加载（可以说运行、解析）时机上有所不同</p>
+<p>语法</p>
+<p>Sea.js 推崇一个模块一个文件，遵循统一的写法</p>
+<p>define</p>
+<p>define(id?, deps?, factory)<br>因为CMD推崇</p>
+<p>一个文件一个模块，所以经常就用文件名作为模块id<br>CMD推崇依赖就近，所以一般不在define的参数中写依赖，在factory中写<br>factory有三个参数</p>
+<p>function(require, exports, module)<br>require</p>
+<p>require 是 factory 函数的第一个参数</p>
+<p>require(id)<br>require 是一个方法，接受 模块标识 作为唯一参数，用来获取其他模块提供的接口</p>
+<p>exports</p>
+<p>exports 是一个对象，用来向外提供模块接口</p>
+<p>module</p>
+<p>module 是一个对象，上面存储了与当前模块相关联的一些属性和方法</p>
+<p>demo</p>
+<p>// 定义模块  myModule.js<br>define(function(require, exports, module) {<br>  var $ = require(‘jquery.js’)<br>  $(‘div’).addClass(‘active’);<br>});</p>
+<p>// 加载模块<br>seajs.use([‘myModule.js’], function(my){</p>
+<p>});</p>
+<h2 id="AMD与CMD区别"><a href="#AMD与CMD区别" class="headerlink" title="AMD与CMD区别"></a>AMD与CMD区别</h2><p>关于这两个的区别网上可以搜出一堆文章，简单总结一下</p>
+<p>最明显的区别就是在模块定义时对依赖的处理不同</p>
+<p>AMD推崇依赖前置，在定义模块的时候就要声明其依赖的模块<br>CMD推崇就近依赖，只有在用到某个模块的时候再去require<br>这种区别各有优劣，只是语法上的差距，而且requireJS和SeaJS都支持对方的写法</p>
+<p>AMD和CMD最大的区别是对依赖模块的执行时机处理不同，注意不是加载的时机或者方式不同</p>
+<p>很多人说requireJS是异步加载模块，SeaJS是同步加载模块，这么理解实际上是不准确的，其实加载模块都是异步的，只不过AMD依赖前置，js可以方便知道依赖模块是谁，立即加载，而CMD就近依赖，需要使用把模块变为字符串解析一遍才知道依赖了那些模块，这也是很多人诟病CMD的一点，牺牲性能来带来开发的便利性，实际上解析模块用的时间短到可以忽略</p>
+<p>为什么我们说两个的区别是依赖模块执行时机不同，为什么很多人认为ADM是异步的，CMD是同步的（除了名字的原因。。。）</p>
+<p>同样都是异步加载模块，AMD在加载模块完成后就会执行改模块，所有模块都加载执行完后会进入require的回调函数，执行主逻辑，这样的效果就是依赖模块的执行顺序和书写顺序不一定一致，看网络速度，哪个先下载下来，哪个先执行，但是主逻辑一定在所有依赖加载完成后才执行</p>
+<p>CMD加载完某个依赖模块后并不执行，只是下载而已，在所有依赖模块加载完成后进入主逻辑，遇到require语句的时候才执行对应的模块，这样模块的执行顺序和书写顺序是完全一致的</p>
+<p>这也是很多人说AMD用户体验好，因为没有延迟，依赖模块提前执行了，CMD性能好，因为只有用户需要的时候才执行的原因</p>
+<h1 id="转自："><a href="#转自：" class="headerlink" title="转自："></a>转自：</h1><p><a href="http://www.cnblogs.com/dolphinX/p/4381855.html" target="_blank" rel="external">博客园</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前端模块化&lt;br&gt;这篇文章很好，看了好多遍，转过来以后不会迷路了&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yxuecheng.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="javascript" scheme="https://yxuecheng.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>迎接我的新Mac</title>
+    <link href="https://yxuecheng.github.io/2017/02/11/%E8%BF%8E%E6%8E%A5%E6%88%91%E7%9A%84%E6%96%B0mac/"/>
+    <id>https://yxuecheng.github.io/2017/02/11/迎接我的新mac/</id>
+    <published>2017-02-11T07:53:21.000Z</published>
+    <updated>2017-02-11T15:13:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>迎接我的新Mac 2016 Touch Bar</p>
+<a id="more"></a>
+<p>16年一直想换新款Mac，也在准备钱</p>
+<p>时间很快，17年终于把钱准备够了，终于可以淘汰掉手里这款，说实话15款没任何毛病，也就是16款是新款的原因吧就是想换，于是今天元宵节去实体店取了新款Mac，每次出入店铺的时间都不足十分钟，这些电子产品没什么可考虑的</p>
+<p>和以往不同的是这次买了电脑没有当场激活，以防止后悔</p>
+<p>都说新版Mac键程短，我用这其实没什么，也不会打错字</p>
+<p>嗯，就酱…</p>
+<p><img src="/images/迎接/mac.jpeg" alt="一张图就够了"><br><img src="/images/迎接/mac2.jpeg" alt="一张图就够了"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;迎接我的新Mac 2016 Touch Bar&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://yxuecheng.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="others" scheme="https://yxuecheng.github.io/tags/others/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端学习路线</title>
+    <link href="https://yxuecheng.github.io/2017/02/09/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
+    <id>https://yxuecheng.github.io/2017/02/09/前端学习路线/</id>
+    <published>2017-02-09T12:17:51.000Z</published>
+    <updated>2017-02-12T06:34:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>前端学习路线<br><a id="more"></a></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="我为什么学习前端？"><a href="#我为什么学习前端？" class="headerlink" title="我为什么学习前端？"></a>我为什么学习前端？</h2><p>当初还小，不知道以后做什么，思想不断成熟，觉得该学一些本事找工作了，只因在微博校园校内实习，对甘肃农业大学的微博大厅和H5微场景感兴趣就决定开始学习前端；后来也做了两个demo当时满满的成就感<br>下面就让我们瞧瞧这两个demo <a href="http://weibohlj.oss-cn-shanghai.aliyuncs.com/index.html" target="_blank" rel="external">微博大厅</a> <a href="https://yxuecheng.github.io/H5/">H5</a></p>
+<h2 id="更新这篇博客时我在哪？"><a href="#更新这篇博客时我在哪？" class="headerlink" title="更新这篇博客时我在哪？"></a>更新这篇博客时我在哪？</h2><p>2017-02-09 20:17:51<br>这个时间点我已经大四快要毕业了，也正是寒假，辞掉了北京的实习回到哈尔滨；</p>
+<h1 id="学习路线"><a href="#学习路线" class="headerlink" title="学习路线"></a>学习路线</h1><p>以下学习路线是我转载的，也是我的学习路线<br>入行行头：5大硬件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">一颗人类的大脑：智商在平均水平线以上即可</div><div class="line">一份强烈的渴望：我的代码要可以运行在任何一个有浏览器的设备上</div><div class="line">一台笔记本电脑：不需要花费很多钱得那种，当然你也可以只用一台台式机，但是那样就不能带着它坐在咖啡馆里...</div><div class="line">一个文本编辑器：可以推荐的比如 Visual Studio Code，Brackets</div><div class="line">一个翻墙代理：这个大家都懂的，我就不解释了</div></pre></td></tr></table></figure></p>
+<h2 id="初级资质（比如我）"><a href="#初级资质（比如我）" class="headerlink" title="初级资质（比如我）"></a>初级资质（比如我）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">你需要学会浏览器能理解的三大语言：HTML, CSS, Javascript    神圣的三位一体！</div><div class="line">非常重要的一点是，一定要理解这三大语言后再去学习别的，确保知道怎样在各种尺寸的屏幕上排列好你的网页，怎样在一个按钮被按下后 do something!</div></pre></td></tr></table></figure>
+<h2 id="中级进阶路径（这些我好像已经会了）"><a href="#中级进阶路径（这些我好像已经会了）" class="headerlink" title="中级进阶路径（这些我好像已经会了）"></a>中级进阶路径（这些我好像已经会了）</h2><p>一旦掌握了三大语言，就可以开始学习专业的开发流程啦：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Command line：好吧,命令行也许都会,但是要掌握最基本的操作,熟悉怎样配置你的环境,还有那些奇怪的 shell 脚本，因为你会经常用到它们</div><div class="line">CSS 已经不够用了,我们有了 CSS 的预处理：Sass, LESS</div><div class="line">知道如何搭建一个 build 系统：Gulp 或 Grunt 这类的构建任务脚本器,编译 LESS 成 CSS, concatenating Javascript, minify 压缩静态资源, 选一个异步或同步的方式加载它们，然后一个好的 build 系统要能自动做到那些,包括一个本地的 web 服务器用于测试代码</div><div class="line">代码版本管理，git</div><div class="line">在 github 上分享你的代码！</div><div class="line">部署! 让你的网站上线。可以找一个免费的服务提供商，比如本博托管在https://pages.github.com</div><div class="line">这些几乎就是现代前端开发者会用到的工具和技术，好了，你现在可以成为一个前端开发工程师了</div></pre></td></tr></table></figure></p>
+<h2 id="高级炸裂装备（不断学习）"><a href="#高级炸裂装备（不断学习）" class="headerlink" title="高级炸裂装备（不断学习）"></a>高级炸裂装备（不断学习）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">你已经能够为你的朋友的业务搭建一个网站了，简洁的排版，高清大照片，你成功了，它甚至在你的手机都看着很棒。那么还有什么值得学的？</div><div class="line">把你的网站和一个内容管理系统 (CMS）集成在一起。一个 CMS 能够让你通过用户界面增、删、改、组织你的内容，不需要任何代码。这就是那些博客网站如何工作的。比如免费的 WordPress，去熟悉一个开源的 CMS 吧，会很有用的</div><div class="line">学习怎样搭建一个 CMS，意味着你讲要熟悉一个服务器端的语言，比如 Node.js, 或 PHP，然后你还会想要知道怎样和数据库打交道，比如 MySql 或者 MongoDB</div><div class="line">来熟悉一种 Javascript 框架吧，这样你可以真正的搭建一个交互出色的 web 应用，那真的很重要，比如 Angular, React, Ember。只要挑一个你喜欢的，但是一定要精通它</div><div class="line">Javascript design patterns，javascript 也有设计模式？ 是的，读一下吧</div></pre></td></tr></table></figure>
+<h2 id="突破天际的大招"><a href="#突破天际的大招" class="headerlink" title="突破天际的大招"></a>突破天际的大招</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">沟通技巧！你需要和你的小伙伴们沟通，他们是你的 coder 伙伴，你的老板，你的用户，你的....stackoverflow.com， 有问题找 stackoverflow，扩展一下人脉把，上 meetup.com, 在博客上写一些你的学习体验， 在 Gitgub 贡献一下你的 Pull request</div><div class="line">界面设计和用户体验设计 UI/UX design，前段开发的小伙伴需要具备基本的 UI/UX 设计知识</div><div class="line">搜索优化，要知道怎样提高网站的搜索排名，更容易被人们搜索到</div><div class="line">CSS 过度效果，给你的按钮写一个 hover 的 CSS 动画，还有你的从右边滑入的导航菜单也需要一个平滑的动画</div><div class="line">关于性能，让你的网站尽可能快的被加载，减少 DOM 的 reflow 和 repaint 操作，防止滚动性能瓶颈，优化 Javascript, 翻墙读一读这个吧 google web developer fundamentals</div><div class="line">用一些测试框架来实现 Javascript 单元测试，比如 Jasmine，QUnit</div><div class="line">持续集成 Continuous integration (CI)，知道怎样配置一套和伙伴们一起使用的自动测试和部署的工具，比如 CircleCI, Travis CI, Jenkins</div></pre></td></tr></table></figure>
+<h2 id="超好用的其他加成技能"><a href="#超好用的其他加成技能" class="headerlink" title="超好用的其他加成技能"></a>超好用的其他加成技能</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">用 CSS3, SVG, Canvas API 实现动画</div><div class="line">后端开发， Node.js</div></pre></td></tr></table></figure>
+<h2 id="最后：去找工作吧！"><a href="#最后：去找工作吧！" class="headerlink" title="最后：去找工作吧！"></a>最后：去找工作吧！</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">有了技能是不够的，你需要能展示它们，你还能干的是：</div><div class="line">搭建一个小网站，公开你的 github 代码库，确保你的代码和文档清楚漂亮，还有一份 README</div><div class="line">去 meetup.com 找你的老板或者投资人吧，开一个博客，申请一个 linkedin 帐号</div><div class="line">因为 web 技术总是在变化，最后，即使找到了一份称心的工作，还是需要 stay motivated, 你需要时常去下面这些地方转转：CSS Tricks，SitePoint，Smashing Magazine</div><div class="line">当然还有些像 CSDN 这样中文社区，总之遇到任何难题，社区里有总有乐于助人的</div><div class="line">保持好的职业态度：Stay humble, and build cool shit</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前端学习路线&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yxuecheng.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="javascript" scheme="https://yxuecheng.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前后端项目技术方案</title>
+    <link href="https://yxuecheng.github.io/2017/02/09/solution/"/>
+    <id>https://yxuecheng.github.io/2017/02/09/solution/</id>
+    <published>2017-02-09T10:18:28.000Z</published>
+    <updated>2017-02-10T10:41:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>简单前后端项目技术方案<br><a id="more"></a><br>明天年会，今晚部门开了个晚会刚到住处多久，还在百度实习，想记录点东西；我项目中没用到这些，介于我有代码权限所以以下的东西从其他项目中学过来的！自己研究了好久，因为环境配置，思路梳理很慢。 </p>
+<h2 id="简单前后端项目技术方案-2017-1-10"><a href="#简单前后端项目技术方案-2017-1-10" class="headerlink" title="简单前后端项目技术方案 2017-1-10"></a>简单前后端项目技术方案 2017-1-10</h2><h3 id="前端："><a href="#前端：" class="headerlink" title="前端："></a>前端：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">构建：Fis3</div><div class="line">结构：HTML,TMPL,Smarty</div><div class="line">样式：Less</div><div class="line">框架：....</div><div class="line">util：....</div></pre></td></tr></table></figure>
+<h3 id="后端："><a href="#后端：" class="headerlink" title="后端："></a>后端：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PHP-CI,Smarty,MySql</div></pre></td></tr></table></figure>
+<h3 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h3><p><a href="http://fis.baidu.com/" target="_blank" rel="external">构建工具 Fis3</a><br><a href="https://github.com/BaiduFE/BaiduTemplate" target="_blank" rel="external">JS 模板 Tmpl</a><br><a href="https://github.com/fex-team/fis3-smarty" target="_blank" rel="external">基于Smarty的解决方案 Fis Smarty</a><br><a href="https://github.com/yxuecheng/graduation-rd" target="_blank" rel="external">CI Smarty 融合方法</a></p>
+<h2 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h2><blockquote>
+<p>以上TMPL,Smarty 都是用Fis集成的<br>狼厂后端PHP有用的是ODP了解的可以去搞一下，我这里使用CI融合的Smarty<br>我的MD语法掌握不太好！所以写的丑了点~</p>
+</blockquote>
+<h2 id="看了这么多？直奔主题：graduation"><a href="#看了这么多？直奔主题：graduation" class="headerlink" title="看了这么多？直奔主题：graduation"></a>看了这么多？直奔主题：<a href="https://github.com/yxuecheng/graduation" target="_blank" rel="external">graduation</a></h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;简单前后端项目技术方案&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yxuecheng.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="原创" scheme="https://yxuecheng.github.io/categories/%E5%89%8D%E7%AB%AF/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+      <category term="ci" scheme="https://yxuecheng.github.io/tags/ci/"/>
+    
+      <category term="smarty" scheme="https://yxuecheng.github.io/tags/smarty/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fis3+Es6+Smarty+Tmpl 项目实战</title>
+    <link href="https://yxuecheng.github.io/2017/02/09/fis3-es6-smarty-tmpl-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/"/>
+    <id>https://yxuecheng.github.io/2017/02/09/fis3-es6-smarty-tmpl-项目实战/</id>
+    <published>2017-02-09T09:36:50.000Z</published>
+    <updated>2017-02-13T10:14:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Fis3+Es6+Smarty+Tmpl 项目实战<br>毕业设计代码，还没完成！但可以跑哦~<br>虽说技术稍微过时，但是自己也摸索了好久，也是我的积累哦<br><a id="more"></a></p>
+<h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><h2 id="阅读以下部分假定你已经了解："><a href="#阅读以下部分假定你已经了解：" class="headerlink" title="阅读以下部分假定你已经了解："></a>阅读以下部分假定你已经了解：</h2><ul>
+<li><a href="http://fis.baidu.com/" target="_blank" rel="external">构建工具 Fis3</a></li>
+<li><a href="https://github.com/fex-team/fis3-smarty" target="_blank" rel="external">基于Smarty的解决方案 Fis-Smarty</a></li>
+<li><a href="https://github.com/yxuecheng/graduation/blob/master/README.md" target="_blank" rel="external">一些杂碎 Less, Tmpl, Es6 …</a></li>
+</ul>
+<p>#微薄网站的设计与实现</p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
+<li>展示，留言，评论，评论量，访问量</li>
+<li>后台CMS</li>
+<li>瀑布流展示,懒加载数据</li>
+<li><del>接入微博组件等</del></li>
+</ul>
+<h2 id="技术方案"><a href="#技术方案" class="headerlink" title="技术方案"></a>技术方案</h2><ul>
+<li>构建: Fis3 </li>
+<li>结构: HTML,TMPL,Smarty</li>
+<li>样式: Less</li>
+<li>类库/框架: jQuery</li>
+<li>util: urlParam  …</li>
+<li>数据: 假数据模拟，后期发布开发机联调</li>
+</ul>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>前端目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">└─graduation</div><div class="line">    ├─ README.md</div><div class="line">    ├─ home</div><div class="line">    └─ common</div><div class="line">        ├─ plugin            # Smarty 的插件放入这个目录</div><div class="line">        ├─ smarty.conf       # 本地测试的 Smarty 引擎的配置文件</div><div class="line">        ├─ fis-conf.js       # fis3 的配置文件</div><div class="line">        ├─ page              # 放一些页面</div><div class="line">        ├─ server.conf       # 本地测试的URL转发规则配置文件</div><div class="line">        ├─ static            # 非组件静态资源</div><div class="line">        ├─ test              # 假数据</div><div class="line">        └─ widget            # 放一些 widget，里面代码最终会被组件化封装</div><div class="line">           ├─ header         # 头部模块</div><div class="line">           │  ├─ header.js   # js文件es6 </div><div class="line">           │  ├─ header.less # css预处理 </div><div class="line">           │  ├─ header.tmpl # JS模板 </div><div class="line">           │  └─ header.tpl  # Smarty 复用还是挺方便的</div><div class="line">           ├─ nav            # 导航模块</div><div class="line">           ├─ article        # 文章模块</div><div class="line">           └─ footer         # 尾部模块</div></pre></td></tr></table></figure></p>
+<ul>
+<li>目录文件不是都必须需要，一般都会包含page、widget俩目录</li>
+</ul>
+<h1 id="发布到本地模拟开发机，并预览该项目"><a href="#发布到本地模拟开发机，并预览该项目" class="headerlink" title="发布到本地模拟开发机，并预览该项目"></a>发布到本地模拟开发机，并预览该项目</h1><p>修改 fis-global-conf.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> RECEIVER = <span class="string">'http://127.0.0.1/graduation-rd/receiver.php'</span>;</div><div class="line"><span class="keyword">const</span> to_path = <span class="string">'/graduation-rd'</span>;</div><div class="line"><span class="keyword">const</span> base_url = <span class="string">'/Applications/XAMPP/xamppfiles/htdocs/graduation-rd/'</span>;</div></pre></td></tr></table></figure></p>
+<p>安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install -g fis3</div><div class="line">npm install -g fis3-smarty</div></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/yxuecheng/graduation-rd" target="_blank" rel="external">后端环境下载</a> </p>
+<p>启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fis3 release -r common xuecheng</div><div class="line">fis3 release -r home xuecheng </div><div class="line">fis3 release -r ...</div></pre></td></tr></table></figure></p>
+<p>发布成功后目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">└─ htdocs</div><div class="line">    └─graduation-rd</div><div class="line">        ├── application</div><div class="line">        ├── home.php</div><div class="line">        ├── license.txt</div><div class="line">        ├── receiver.php </div><div class="line">        ├── system</div><div class="line">        ├── user_guide</div><div class="line">        ├── template     # .tpl 发布位置</div><div class="line">        ├── static       # 静态资源发布位置</div><div class="line">        ├── plugin       # plugin/*.php 发布位置</div><div class="line">        └── config       # config/*.json 发布位置</div></pre></td></tr></table></figure></p>
+<h1 id="已上线版本"><a href="#已上线版本" class="headerlink" title="已上线版本"></a>已上线版本</h1><ul>
+<li><a href="https://github.com/yxuecheng/graduation/releases/tag/v1.1" target="_blank" rel="external"> V1.1 第一版</a></li>
+<li><a href="https://github.com/yxuecheng/graduation/releases/tag/v1.4" target="_blank" rel="external"> v1.4 引入微博组件</a></li>
+<li><a href="https://github.com/yxuecheng/graduation/releases/tag/v1.5" target="_blank" rel="external"> v1.5 封装分页组件</a></li>
+<li><a href="https://github.com/yxuecheng/graduation/releases/tag/v1.6" target="_blank" rel="external"> v1.6 解决严格模式bdtmpl问题</a> </li>
+<li><a href="https://github.com/yxuecheng/graduation/releases" target="_blank" rel="external">所有版本</a></li>
+</ul>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li>代码风格: <a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank" rel="external">clean-code-javascript</a></li>
+<li>ES6: <a href="http://es6.ruanyifeng.com" target="_blank" rel="external">ruanyifeng </a></li>
+</ul>
+<h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><ul>
+<li><a href="https://github.com/yanhaijing" target="_blank" rel="external">yanhaijing</a></li>
+<li><a href="https://www.google.com" target="_blank" rel="external">Google</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Fis3+Es6+Smarty+Tmpl 项目实战&lt;br&gt;毕业设计代码，还没完成！但可以跑哦~&lt;br&gt;虽说技术稍微过时，但是自己也摸索了好久，也是我的积累哦&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yxuecheng.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="原创" scheme="https://yxuecheng.github.io/categories/%E5%89%8D%E7%AB%AF/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+      <category term="Fis3" scheme="https://yxuecheng.github.io/tags/Fis3/"/>
+    
+      <category term="Es6" scheme="https://yxuecheng.github.io/tags/Es6/"/>
+    
+      <category term="Smarty" scheme="https://yxuecheng.github.io/tags/Smarty/"/>
+    
+      <category term="Tmpl" scheme="https://yxuecheng.github.io/tags/Tmpl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于这个博客</title>
+    <link href="https://yxuecheng.github.io/2017/02/09/%E5%85%B3%E4%BA%8E%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://yxuecheng.github.io/2017/02/09/关于这个博客/</id>
+    <published>2017-02-09T08:43:59.000Z</published>
+    <updated>2017-02-10T11:18:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>基于HEXO的博客最近才弄的，一直想有一个自己的博客，这个维护成本低，所以以后打算用它写点东西<br><a id="more"></a><br>之前的个人网站仅仅是为了毕业设计而做的；</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;基于HEXO的博客最近才弄的，一直想有一个自己的博客，这个维护成本低，所以以后打算用它写点东西&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://yxuecheng.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="others" scheme="https://yxuecheng.github.io/tags/others/"/>
+    
+  </entry>
+  
+</feed>

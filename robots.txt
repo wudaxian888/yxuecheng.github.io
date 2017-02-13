@@ -1,0 +1,2 @@
+Sitemap: https://yxuecheng.github.io/sitemap.xml
+Sitemap: https://yxuecheng.github.io/baidusitemap.xml

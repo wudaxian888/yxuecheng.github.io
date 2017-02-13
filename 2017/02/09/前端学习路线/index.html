@@ -1,0 +1,952 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="姚雪城" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://ww4.sinaimg.cn/mw690/a1e49542jw8fcff61eshkj20yi0yiwil.jpg?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="前端学习路线">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端学习路线">
+<meta property="og:url" content="https://yxuecheng.github.io/2017/02/09/前端学习路线/index.html">
+<meta property="og:site_name" content="姚雪城">
+<meta property="og:description" content="前端学习路线">
+<meta property="og:updated_time" content="2017-02-12T06:34:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端学习路线">
+<meta name="twitter:description" content="前端学习路线">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://yxuecheng.github.io/2017/02/09/前端学习路线/"/>
+
+
+
+
+
+  <title> 前端学习路线 | 姚雪城 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-91762915-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">姚雪城</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description">博客</h1>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+    
+  
+
+  <article class="post post-type-normal  post-sticky" itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://yxuecheng.github.io/2017/02/09/前端学习路线/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="姚雪城">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://ww4.sinaimg.cn/mw690/a1e49542jw8fcff61eshkj20yi0yiwil.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="姚雪城">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="姚雪城" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                前端学习路线
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-09T20:17:51+08:00">
+                2017-02-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/09/前端学习路线/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/09/前端学习路线/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>前端学习路线<br><a id="more"></a></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="我为什么学习前端？"><a href="#我为什么学习前端？" class="headerlink" title="我为什么学习前端？"></a>我为什么学习前端？</h2><p>当初还小，不知道以后做什么，思想不断成熟，觉得该学一些本事找工作了，只因在微博校园校内实习，对甘肃农业大学的微博大厅和H5微场景感兴趣就决定开始学习前端；后来也做了两个demo当时满满的成就感<br>下面就让我们瞧瞧这两个demo <a href="http://weibohlj.oss-cn-shanghai.aliyuncs.com/index.html" target="_blank" rel="external">微博大厅</a> <a href="https://yxuecheng.github.io/H5/">H5</a></p>
+<h2 id="更新这篇博客时我在哪？"><a href="#更新这篇博客时我在哪？" class="headerlink" title="更新这篇博客时我在哪？"></a>更新这篇博客时我在哪？</h2><p>2017-02-09 20:17:51<br>这个时间点我已经大四快要毕业了，也正是寒假，辞掉了北京的实习回到哈尔滨；</p>
+<h1 id="学习路线"><a href="#学习路线" class="headerlink" title="学习路线"></a>学习路线</h1><p>以下学习路线是我转载的，也是我的学习路线<br>入行行头：5大硬件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">一颗人类的大脑：智商在平均水平线以上即可</div><div class="line">一份强烈的渴望：我的代码要可以运行在任何一个有浏览器的设备上</div><div class="line">一台笔记本电脑：不需要花费很多钱得那种，当然你也可以只用一台台式机，但是那样就不能带着它坐在咖啡馆里...</div><div class="line">一个文本编辑器：可以推荐的比如 Visual Studio Code，Brackets</div><div class="line">一个翻墙代理：这个大家都懂的，我就不解释了</div></pre></td></tr></table></figure></p>
+<h2 id="初级资质（比如我）"><a href="#初级资质（比如我）" class="headerlink" title="初级资质（比如我）"></a>初级资质（比如我）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">你需要学会浏览器能理解的三大语言：HTML, CSS, Javascript    神圣的三位一体！</div><div class="line">非常重要的一点是，一定要理解这三大语言后再去学习别的，确保知道怎样在各种尺寸的屏幕上排列好你的网页，怎样在一个按钮被按下后 do something!</div></pre></td></tr></table></figure>
+<h2 id="中级进阶路径（这些我好像已经会了）"><a href="#中级进阶路径（这些我好像已经会了）" class="headerlink" title="中级进阶路径（这些我好像已经会了）"></a>中级进阶路径（这些我好像已经会了）</h2><p>一旦掌握了三大语言，就可以开始学习专业的开发流程啦：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Command line：好吧,命令行也许都会,但是要掌握最基本的操作,熟悉怎样配置你的环境,还有那些奇怪的 shell 脚本，因为你会经常用到它们</div><div class="line">CSS 已经不够用了,我们有了 CSS 的预处理：Sass, LESS</div><div class="line">知道如何搭建一个 build 系统：Gulp 或 Grunt 这类的构建任务脚本器,编译 LESS 成 CSS, concatenating Javascript, minify 压缩静态资源, 选一个异步或同步的方式加载它们，然后一个好的 build 系统要能自动做到那些,包括一个本地的 web 服务器用于测试代码</div><div class="line">代码版本管理，git</div><div class="line">在 github 上分享你的代码！</div><div class="line">部署! 让你的网站上线。可以找一个免费的服务提供商，比如本博托管在https://pages.github.com</div><div class="line">这些几乎就是现代前端开发者会用到的工具和技术，好了，你现在可以成为一个前端开发工程师了</div></pre></td></tr></table></figure></p>
+<h2 id="高级炸裂装备（不断学习）"><a href="#高级炸裂装备（不断学习）" class="headerlink" title="高级炸裂装备（不断学习）"></a>高级炸裂装备（不断学习）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">你已经能够为你的朋友的业务搭建一个网站了，简洁的排版，高清大照片，你成功了，它甚至在你的手机都看着很棒。那么还有什么值得学的？</div><div class="line">把你的网站和一个内容管理系统 (CMS）集成在一起。一个 CMS 能够让你通过用户界面增、删、改、组织你的内容，不需要任何代码。这就是那些博客网站如何工作的。比如免费的 WordPress，去熟悉一个开源的 CMS 吧，会很有用的</div><div class="line">学习怎样搭建一个 CMS，意味着你讲要熟悉一个服务器端的语言，比如 Node.js, 或 PHP，然后你还会想要知道怎样和数据库打交道，比如 MySql 或者 MongoDB</div><div class="line">来熟悉一种 Javascript 框架吧，这样你可以真正的搭建一个交互出色的 web 应用，那真的很重要，比如 Angular, React, Ember。只要挑一个你喜欢的，但是一定要精通它</div><div class="line">Javascript design patterns，javascript 也有设计模式？ 是的，读一下吧</div></pre></td></tr></table></figure>
+<h2 id="突破天际的大招"><a href="#突破天际的大招" class="headerlink" title="突破天际的大招"></a>突破天际的大招</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">沟通技巧！你需要和你的小伙伴们沟通，他们是你的 coder 伙伴，你的老板，你的用户，你的....stackoverflow.com， 有问题找 stackoverflow，扩展一下人脉把，上 meetup.com, 在博客上写一些你的学习体验， 在 Gitgub 贡献一下你的 Pull request</div><div class="line">界面设计和用户体验设计 UI/UX design，前段开发的小伙伴需要具备基本的 UI/UX 设计知识</div><div class="line">搜索优化，要知道怎样提高网站的搜索排名，更容易被人们搜索到</div><div class="line">CSS 过度效果，给你的按钮写一个 hover 的 CSS 动画，还有你的从右边滑入的导航菜单也需要一个平滑的动画</div><div class="line">关于性能，让你的网站尽可能快的被加载，减少 DOM 的 reflow 和 repaint 操作，防止滚动性能瓶颈，优化 Javascript, 翻墙读一读这个吧 google web developer fundamentals</div><div class="line">用一些测试框架来实现 Javascript 单元测试，比如 Jasmine，QUnit</div><div class="line">持续集成 Continuous integration (CI)，知道怎样配置一套和伙伴们一起使用的自动测试和部署的工具，比如 CircleCI, Travis CI, Jenkins</div></pre></td></tr></table></figure>
+<h2 id="超好用的其他加成技能"><a href="#超好用的其他加成技能" class="headerlink" title="超好用的其他加成技能"></a>超好用的其他加成技能</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">用 CSS3, SVG, Canvas API 实现动画</div><div class="line">后端开发， Node.js</div></pre></td></tr></table></figure>
+<h2 id="最后：去找工作吧！"><a href="#最后：去找工作吧！" class="headerlink" title="最后：去找工作吧！"></a>最后：去找工作吧！</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">有了技能是不够的，你需要能展示它们，你还能干的是：</div><div class="line">搭建一个小网站，公开你的 github 代码库，确保你的代码和文档清楚漂亮，还有一份 README</div><div class="line">去 meetup.com 找你的老板或者投资人吧，开一个博客，申请一个 linkedin 帐号</div><div class="line">因为 web 技术总是在变化，最后，即使找到了一份称心的工作，还是需要 stay motivated, 你需要时常去下面这些地方转转：CSS Tricks，SitePoint，Smashing Magazine</div><div class="line">当然还有些像 CSDN 这样中文社区，总之遇到任何难题，社区里有总有乐于助人的</div><div class="line">保持好的职业态度：Stay humble, and build cool shit</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/09/solution/" rel="next" title="前后端项目技术方案">
+                <i class="fa fa-chevron-left"></i> 前后端项目技术方案
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/11/迎接我的新mac/" rel="prev" title="迎接我的新Mac">
+                迎接我的新Mac <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2017/02/09/前端学习路线/"
+     data-title="前端学习路线"
+     data-content=""
+     data-url="https://yxuecheng.github.io/2017/02/09/前端学习路线/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/09/前端学习路线/"
+           data-title="前端学习路线" data-url="https://yxuecheng.github.io/2017/02/09/前端学习路线/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://ww4.sinaimg.cn/mw690/a1e49542jw8fcff61eshkj20yi0yiwil.jpg"
+               alt="姚雪城" />
+          <p class="site-author-name" itemprop="name">姚雪城</p>
+          <p class="site-description motion-element" itemprop="description">姚雪城</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yxuecheng" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/207444916" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#我为什么学习前端？"><span class="nav-number">1.1.</span> <span class="nav-text">我为什么学习前端？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新这篇博客时我在哪？"><span class="nav-number">1.2.</span> <span class="nav-text">更新这篇博客时我在哪？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#学习路线"><span class="nav-number">2.</span> <span class="nav-text">学习路线</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初级资质（比如我）"><span class="nav-number">2.1.</span> <span class="nav-text">初级资质（比如我）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中级进阶路径（这些我好像已经会了）"><span class="nav-number">2.2.</span> <span class="nav-text">中级进阶路径（这些我好像已经会了）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级炸裂装备（不断学习）"><span class="nav-number">2.3.</span> <span class="nav-text">高级炸裂装备（不断学习）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#突破天际的大招"><span class="nav-number">2.4.</span> <span class="nav-text">突破天际的大招</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#超好用的其他加成技能"><span class="nav-number">2.5.</span> <span class="nav-text">超好用的其他加成技能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后：去找工作吧！"><span class="nav-number">2.6.</span> <span class="nav-text">最后：去找工作吧！</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">姚雪城</span>
+</div>
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"yxuecheng"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>
