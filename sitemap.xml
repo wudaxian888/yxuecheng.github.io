@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yxuecheng.github.io/2017/02/14/React-Redux%E5%AD%A6%E4%B9%A0/</loc>
+    
+    <lastmod>2017-02-14T04:21:51.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yxuecheng.github.io/2017/02/11/%E8%BF%8E%E6%8E%A5%E6%88%91%E7%9A%84%E6%96%B0mac/</loc>
+    
+    <lastmod>2017-02-14T04:21:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yxuecheng.github.io/2017/02/13/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</loc>
+    
+    <lastmod>2017-02-14T04:21:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yxuecheng.github.io/2017/02/09/fis3-es6-smarty-tmpl-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</loc>
     
     <lastmod>2017-02-14T04:17:19.000Z</lastmod>
@@ -9,23 +30,9 @@
   </url>
   
   <url>
-    <loc>https://yxuecheng.github.io/2017/02/13/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/</loc>
-    
-    <lastmod>2017-02-14T04:17:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://yxuecheng.github.io/2017/02/09/%E5%85%B3%E4%BA%8E%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2017-02-14T04:16:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yxuecheng.github.io/2017/02/14/React-Redux%E5%AD%A6%E4%B9%A0/</loc>
-    
-    <lastmod>2017-02-14T04:10:48.000Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>https://yxuecheng.github.io/2017/02/09/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</loc>
     
     <lastmod>2017-02-12T06:34:04.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yxuecheng.github.io/2017/02/11/%E8%BF%8E%E6%8E%A5%E6%88%91%E7%9A%84%E6%96%B0mac/</loc>
-    
-    <lastmod>2017-02-11T15:13:56.000Z</lastmod>
     
   </url>
   
