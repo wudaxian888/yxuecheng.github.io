@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://yxuecheng.github.io/2017/02/14/React-Redux%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2017-02-14T04:50:13.000Z</lastmod>
+    <lastmod>2017-02-14T07:46:41.000Z</lastmod>
     <data>
         <display>
         <title>Redux学习</title>
@@ -14,6 +14,26 @@
         <tag>React</tag>
          
         <tag>Redux</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="https://yxuecheng.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://yxuecheng.github.io/2017/02/09/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</loc>
+    <lastmod>2017-02-14T05:33:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端学习路线</title>
+        <pubTime>2017-02-09T12:17:51.000Z</pubTime>
+        
+        <tag>javascript</tag>
          
          
            
@@ -134,26 +154,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>https://yxuecheng.github.io/2017/02/09/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</loc>
-    <lastmod>2017-02-12T06:34:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>前端学习路线</title>
-        <pubTime>2017-02-09T12:17:51.000Z</pubTime>
-        
-        <tag>javascript</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端" url="https://yxuecheng.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://yxuecheng.github.io/2017/02/09/solution/</loc>
