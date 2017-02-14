@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yxuecheng.github.io/"/>
-  <updated>2017-02-13T13:40:20.000Z</updated>
+  <updated>2017-02-14T03:26:35.000Z</updated>
   <id>https://yxuecheng.github.io/</id>
   
   <author>
@@ -16,14 +16,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>React Redux学习</title>
+    <link href="https://yxuecheng.github.io/2017/02/14/React-Redux%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://yxuecheng.github.io/2017/02/14/React-Redux学习/</id>
+    <published>2017-02-14T03:23:30.000Z</published>
+    <updated>2017-02-14T03:26:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前做过的<a href="https://yxuecheng.github.io/2017/02/09/fis3-es6-smarty-tmpl-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">Fis3+Es6+Smarty+Tmpl 项目实战</a>；<br>数据渲染还是传统的DOM依赖，现在React + Redux 这么火，作为快要毕业的我也需要学习一下，因为很多公司都要求了，蓝瘦~<br><a id="more"></a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前做过的&lt;a href=&quot;https://yxuecheng.github.io/2017/02/09/fis3-es6-smarty-tmpl-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/&quot;&gt;Fis3+Es6+Smarty+Tmpl 项目实战&lt;/a&gt;；&lt;br&gt;数据渲染还是传统的DOM依赖，现在React + Redux 这么火，作为快要毕业的我也需要学习一下，因为很多公司都要求了，蓝瘦~&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yxuecheng.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="React" scheme="https://yxuecheng.github.io/tags/React/"/>
+    
+      <category term="Redux" scheme="https://yxuecheng.github.io/tags/Redux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>git 常用命令</title>
     <link href="https://yxuecheng.github.io/2017/02/13/git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>https://yxuecheng.github.io/2017/02/13/git-常用命令/</id>
     <published>2017-02-13T13:37:49.000Z</published>
-    <updated>2017-02-13T13:40:20.000Z</updated>
+    <updated>2017-02-14T03:22:55.000Z</updated>
     
     <content type="html"><![CDATA[<p>git 常用命令<br><a id="more"></a></p>
 <p>git 如何删除本地创建的仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//删除文件夹下的所有 .git 文件</div><div class="line">find . -name <span class="string">".git"</span> | xargs rm -Rf</div></pre></td></tr></table></figure></p>
+<p>本地仓库与远程仓库建立关联<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git remote add origin git@github.com:djqiang/gitdemo.git</div></pre></td></tr></table></figure></p>
 <p>提示出错信息：fatal: remote origin already exists 解决办法如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git remote rm origin</div><div class="line">$ git remote add origin git@github.com:djqiang/gitdemo.git</div></pre></td></tr></table></figure></p>
 ]]></content>
     

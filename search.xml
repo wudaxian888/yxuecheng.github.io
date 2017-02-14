@@ -3,9 +3,16 @@
   
     
     <entry>
+      <title><![CDATA[React Redux学习]]></title>
+      <url>%2F2017%2F02%2F14%2FReact-Redux%E5%AD%A6%E4%B9%A0%2F</url>
+      <content type="text"><![CDATA[之前做过的Fis3+Es6+Smarty+Tmpl 项目实战；数据渲染还是传统的DOM依赖，现在React + Redux 这么火，作为快要毕业的我也需要学习一下，因为很多公司都要求了，蓝瘦~]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[git 常用命令]]></title>
       <url>%2F2017%2F02%2F13%2Fgit-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
-      <content type="text"><![CDATA[git 常用命令 git 如何删除本地创建的仓库12//删除文件夹下的所有 .git 文件find . -name ".git" | xargs rm -Rf 提示出错信息：fatal: remote origin already exists 解决办法如下：12$ git remote rm origin$ git remote add origin git@github.com:djqiang/gitdemo.git]]></content>
+      <content type="text"><![CDATA[git 常用命令 git 如何删除本地创建的仓库12//删除文件夹下的所有 .git 文件find . -name ".git" | xargs rm -Rf 本地仓库与远程仓库建立关联1$ git remote add origin git@github.com:djqiang/gitdemo.git 提示出错信息：fatal: remote origin already exists 解决办法如下：12$ git remote rm origin$ git remote add origin git@github.com:djqiang/gitdemo.git]]></content>
     </entry>
 
     
