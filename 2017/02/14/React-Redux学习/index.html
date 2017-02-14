@@ -78,17 +78,17 @@
 
 
 
-<meta name="description" content="之前做过的Fis3+Es6+Smarty+Tmpl 项目实战；数据渲染还是传统的DOM依赖，性能一般，现在React + Redux 这么火，作为快要毕业的我也需要学习一下，因为很多公司都要求了，蓝瘦~">
+<meta name="description" content="之前做过的Fis3+Es6+Smarty+Tmpl 项目实战；数据渲染还是传统的DOM依赖，用户留言同步更新留言量需要重新渲染，性能一般，现在React + Redux 这么火，作为快要毕业的我也需要学习一下，因为很多公司都要求了，蓝瘦~">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Redux学习">
 <meta property="og:url" content="https://yxuecheng.github.io/2017/02/14/React-Redux学习/index.html">
 <meta property="og:site_name" content="姚雪城">
-<meta property="og:description" content="之前做过的Fis3+Es6+Smarty+Tmpl 项目实战；数据渲染还是传统的DOM依赖，性能一般，现在React + Redux 这么火，作为快要毕业的我也需要学习一下，因为很多公司都要求了，蓝瘦~">
+<meta property="og:description" content="之前做过的Fis3+Es6+Smarty+Tmpl 项目实战；数据渲染还是传统的DOM依赖，用户留言同步更新留言量需要重新渲染，性能一般，现在React + Redux 这么火，作为快要毕业的我也需要学习一下，因为很多公司都要求了，蓝瘦~">
 <meta property="og:image" content="https://yxuecheng.github.io/images/React-Redux/react-redux结构.png">
-<meta property="og:updated_time" content="2017-02-14T04:37:31.000Z">
+<meta property="og:updated_time" content="2017-02-14T04:50:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redux学习">
-<meta name="twitter:description" content="之前做过的Fis3+Es6+Smarty+Tmpl 项目实战；数据渲染还是传统的DOM依赖，性能一般，现在React + Redux 这么火，作为快要毕业的我也需要学习一下，因为很多公司都要求了，蓝瘦~">
+<meta name="twitter:description" content="之前做过的Fis3+Es6+Smarty+Tmpl 项目实战；数据渲染还是传统的DOM依赖，用户留言同步更新留言量需要重新渲染，性能一般，现在React + Redux 这么火，作为快要毕业的我也需要学习一下，因为很多公司都要求了，蓝瘦~">
 <meta name="twitter:image" content="https://yxuecheng.github.io/images/React-Redux/react-redux结构.png">
 
 
@@ -404,7 +404,7 @@
       
 
       
-        <p>之前做过的<a href="https://yxuecheng.github.io/2017/02/09/fis3-es6-smarty-tmpl-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">Fis3+Es6+Smarty+Tmpl 项目实战</a>；<br>数据渲染还是传统的DOM依赖，性能一般，现在React + Redux 这么火，作为快要毕业的我也需要学习一下，因为很多公司都要求了，蓝瘦~<br><a id="more"></a></p>
+        <p>之前做过的<a href="https://yxuecheng.github.io/2017/02/09/fis3-es6-smarty-tmpl-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">Fis3+Es6+Smarty+Tmpl 项目实战</a>；<br>数据渲染还是传统的DOM依赖，用户留言同步更新留言量需要重新渲染，性能一般，现在React + Redux 这么火，作为快要毕业的我也需要学习一下，因为很多公司都要求了，蓝瘦~<br><a id="more"></a></p>
 <h1 id="零、你可能不需要-Redux"><a href="#零、你可能不需要-Redux" class="headerlink" title="零、你可能不需要 Redux"></a>零、你可能不需要 Redux</h1><p>以下可能不需要使用 Redux。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">用户的使用方式非常简单</div><div class="line">用户之间没有协作</div><div class="line">不需要与服务器大量交互，也没有使用 WebSocket</div><div class="line">视图层（View）只从单一来源获取数据</div></pre></td></tr></table></figure></p>
 <p>以下这些情况才是 Redux 的适用场景：多交互、多数据源。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">某个组件的状态，需要共享</div><div class="line">某个状态需要在任何地方都可以拿到</div><div class="line">一个组件需要改变全局状态</div><div class="line">一个组件需要改变另一个组件的状态</div></pre></td></tr></table></figure></p>
 <h1 id="设计思想"><a href="#设计思想" class="headerlink" title="设计思想"></a>设计思想</h1><p>Redux 的设计思想很简单，就两句话。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Web 应用是一个状态机，视图与状态是一一对应的。</div><div class="line">所有的状态，保存在一个对象里面。</div></pre></td></tr></table></figure></p>
