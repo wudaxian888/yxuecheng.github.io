@@ -322,7 +322,7 @@ return {
     <link href="https://yxuecheng.github.io/2017/02/09/fis3-es6-smarty-tmpl-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/"/>
     <id>https://yxuecheng.github.io/2017/02/09/fis3-es6-smarty-tmpl-项目实战/</id>
     <published>2017-02-09T09:36:50.000Z</published>
-    <updated>2017-02-14T04:34:59.000Z</updated>
+    <updated>2017-02-14T04:35:58.000Z</updated>
     
     <content type="html"><![CDATA[<p>Fis3+Es6+Smarty+Tmpl 项目实战<br>毕业设计代码，还没完成！但可以跑哦~<br>虽说技术稍微过时，但是自己也摸索了好久，也是我的积累哦<br><a id="more"></a></p>
 <h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><h2 id="阅读以下部分假定你已经了解："><a href="#阅读以下部分假定你已经了解：" class="headerlink" title="阅读以下部分假定你已经了解："></a>阅读以下部分假定你已经了解：</h2><ul>
@@ -355,7 +355,7 @@ return {
 <p><a href="https://github.com/yxuecheng/graduation-rd" target="_blank" rel="external">后端环境下载</a> </p>
 <p>启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fis3 release -r common xuecheng</div><div class="line">fis3 release -r home xuecheng </div><div class="line">fis3 release -r ...</div></pre></td></tr></table></figure></p>
 <p>发布成功后目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">└─ htdocs</div><div class="line">    └─graduation-rd</div><div class="line">        ├── application</div><div class="line">        ├── home.php</div><div class="line">        ├── license.txt</div><div class="line">        ├── receiver.php </div><div class="line">        ├── system</div><div class="line">        ├── user_guide</div><div class="line">        ├── template     # .tpl 发布位置</div><div class="line">        ├── static       # 静态资源发布位置</div><div class="line">        ├── plugin       # plugin/*.php 发布位置</div><div class="line">        └── config       # config/*.json 发布位置</div></pre></td></tr></table></figure></p>
-<h1 id="已上线版本"><a href="#已上线版本" class="headerlink" title="已上线版本"></a>已上线版本</h1><ul>
+<h1 id="上线"><a href="#上线" class="headerlink" title="上线"></a>上线</h1><ul>
 <li><a href="https://github.com/yxuecheng/graduation/releases/tag/v1.1" target="_blank" rel="external"> V1.1 第一版</a></li>
 <li><a href="https://github.com/yxuecheng/graduation/releases/tag/v1.4" target="_blank" rel="external"> v1.4 引入微博组件</a></li>
 <li><a href="https://github.com/yxuecheng/graduation/releases/tag/v1.5" target="_blank" rel="external"> v1.5 封装分页组件</a></li>
