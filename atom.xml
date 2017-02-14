@@ -322,7 +322,7 @@ return {
     <link href="https://yxuecheng.github.io/2017/02/09/fis3-es6-smarty-tmpl-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/"/>
     <id>https://yxuecheng.github.io/2017/02/09/fis3-es6-smarty-tmpl-项目实战/</id>
     <published>2017-02-09T09:36:50.000Z</published>
-    <updated>2017-02-14T04:17:19.000Z</updated>
+    <updated>2017-02-14T04:34:59.000Z</updated>
     
     <content type="html"><![CDATA[<p>Fis3+Es6+Smarty+Tmpl 项目实战<br>毕业设计代码，还没完成！但可以跑哦~<br>虽说技术稍微过时，但是自己也摸索了好久，也是我的积累哦<br><a id="more"></a></p>
 <h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><h2 id="阅读以下部分假定你已经了解："><a href="#阅读以下部分假定你已经了解：" class="headerlink" title="阅读以下部分假定你已经了解："></a>阅读以下部分假定你已经了解：</h2><ul>
@@ -349,7 +349,8 @@ return {
 <ul>
 <li>目录文件不是都必须需要，一般都会包含page、widget俩目录</li>
 </ul>
-<h1 id="发布到本地模拟开发机，并预览该项目"><a href="#发布到本地模拟开发机，并预览该项目" class="headerlink" title="发布到本地模拟开发机，并预览该项目"></a>发布到本地模拟开发机，并预览该项目</h1><p>修改 fis-global-conf.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> RECEIVER = <span class="string">'http://127.0.0.1/graduation-rd/receiver.php'</span>;</div><div class="line"><span class="keyword">const</span> to_path = <span class="string">'/graduation-rd'</span>;</div><div class="line"><span class="keyword">const</span> base_url = <span class="string">'/Applications/XAMPP/xamppfiles/htdocs/graduation-rd/'</span>;</div></pre></td></tr></table></figure></p>
+<h1 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h1><p>发布到本地模拟开发机，并预览该项目</p>
+<p>修改 fis-global-conf.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> RECEIVER = <span class="string">'http://127.0.0.1/graduation-rd/receiver.php'</span>;</div><div class="line"><span class="keyword">const</span> to_path = <span class="string">'/graduation-rd'</span>;</div><div class="line"><span class="keyword">const</span> base_url = <span class="string">'/Applications/XAMPP/xamppfiles/htdocs/graduation-rd/'</span>;</div></pre></td></tr></table></figure></p>
 <p>安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install -g fis3</div><div class="line">npm install -g fis3-smarty</div></pre></td></tr></table></figure></p>
 <p><a href="https://github.com/yxuecheng/graduation-rd" target="_blank" rel="external">后端环境下载</a> </p>
 <p>启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fis3 release -r common xuecheng</div><div class="line">fis3 release -r home xuecheng </div><div class="line">fis3 release -r ...</div></pre></td></tr></table></figure></p>
