@@ -375,15 +375,15 @@ return {
     <link href="https://yxuecheng.github.io/2017/02/09/fis3-es6-smarty-tmpl-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/"/>
     <id>https://yxuecheng.github.io/2017/02/09/fis3-es6-smarty-tmpl-项目实战/</id>
     <published>2017-02-09T09:36:50.000Z</published>
-    <updated>2017-02-14T04:35:58.000Z</updated>
+    <updated>2017-02-18T07:14:34.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Fis3+Es6+Smarty+Tmpl 项目实战<br>毕业设计代码，还没完成！但可以跑哦~<br>虽说技术稍微过时，但是自己也摸索了好久，也是我的积累哦<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>Fis3+Es6+Smarty+Tmpl 项目实战<br>毕业设计代码，还没完成！但可以跑哦~<br>虽说技术稍微过时，但是自己也摸索了好久，是学习新技术的基础<br><a id="more"></a></p>
 <h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><h2 id="阅读以下部分假定你已经了解："><a href="#阅读以下部分假定你已经了解：" class="headerlink" title="阅读以下部分假定你已经了解："></a>阅读以下部分假定你已经了解：</h2><ul>
 <li><a href="http://fis.baidu.com/" target="_blank" rel="external">构建工具 Fis3</a></li>
 <li><a href="https://github.com/fex-team/fis3-smarty" target="_blank" rel="external">基于Smarty的解决方案 Fis-Smarty</a></li>
 <li><a href="https://github.com/yxuecheng/graduation/blob/master/README.md" target="_blank" rel="external">一些杂碎 Less, Tmpl, Es6 …</a></li>
 </ul>
-<p>#微薄网站的设计与实现</p>
+<p>微薄网站的设计与实现</p>
 <h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
 <li>展示，留言，评论，评论量，访问量</li>
 <li>后台CMS</li>
@@ -427,7 +427,7 @@ return {
     
     <summary type="html">
     
-      &lt;p&gt;Fis3+Es6+Smarty+Tmpl 项目实战&lt;br&gt;毕业设计代码，还没完成！但可以跑哦~&lt;br&gt;虽说技术稍微过时，但是自己也摸索了好久，也是我的积累哦&lt;br&gt;
+      &lt;p&gt;Fis3+Es6+Smarty+Tmpl 项目实战&lt;br&gt;毕业设计代码，还没完成！但可以跑哦~&lt;br&gt;虽说技术稍微过时，但是自己也摸索了好久，是学习新技术的基础&lt;br&gt;
     
     </summary>
     
