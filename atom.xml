@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yxuecheng.github.io/"/>
-  <updated>2017-02-15T06:56:23.000Z</updated>
+  <updated>2017-02-18T04:43:45.000Z</updated>
   <id>https://yxuecheng.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>随笔2-18</title>
+    <link href="https://yxuecheng.github.io/2017/02/18/%E9%9A%8F%E7%AC%942-18/"/>
+    <id>https://yxuecheng.github.io/2017/02/18/随笔2-18/</id>
+    <published>2017-02-18T04:35:03.000Z</published>
+    <updated>2017-02-18T04:43:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>随便说几句<br><a id="more"></a></p>
+<p>这段时间一直宅在学习Redux，看了好几遍文档，结合一些例子，才hhhhhhhhhhhh弄明白，当然很浅显</p>
+<p>也在GitHub上找一些demo就研究一下，快毕业了，抓紧学点东西吧</p>
+<p>每天有猫狗的陪伴，解锁了很多学习姿势，时而坐着，时而趴着 …..</p>
+<p><img src="/images/218/1.jpeg" alt="alt">;<br><img src="/images/218/2.jpeg" alt="alt">;</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;随便说几句&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://yxuecheng.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="others" scheme="https://yxuecheng.github.io/tags/others/"/>
+    
+  </entry>
   
   <entry>
     <title>js单线程的深入分析</title>
