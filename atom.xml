@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yxuecheng.github.io/"/>
-  <updated>2017-02-18T04:46:20.000Z</updated>
+  <updated>2017-02-18T09:12:07.000Z</updated>
   <id>https://yxuecheng.github.io/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redux状态管理方法与实例</title>
+    <link href="https://yxuecheng.github.io/2017/02/18/Redux%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E4%BE%8B/"/>
+    <id>https://yxuecheng.github.io/2017/02/18/Redux状态管理方法与实例/</id>
+    <published>2017-02-18T09:09:43.000Z</published>
+    <updated>2017-02-18T09:12:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Redux状态管理方法与实例</p>
+<p>虽然官方文档上说只需几分钟就能上手 Redux，但是我个人认为即便你看个两三天也可能上手不了，因为文档里面的知识点不仅数量较多，而且还艰涩难懂，不结合一些实例来看很难用于实际项目中去<br><a id="more"></a><br><a href="http://www.cnblogs.com/luozhihao/p/5660496.html" target="_blank" rel="external">防迷路地址</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Redux状态管理方法与实例&lt;/p&gt;
+&lt;p&gt;虽然官方文档上说只需几分钟就能上手 Redux，但是我个人认为即便你看个两三天也可能上手不了，因为文档里面的知识点不仅数量较多，而且还艰涩难懂，不结合一些实例来看很难用于实际项目中去&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="https://yxuecheng.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="redux" scheme="https://yxuecheng.github.io/tags/redux/"/>
+    
+  </entry>
   
   <entry>
     <title>随笔</title>
