@@ -418,9 +418,9 @@ return {
       <category term="原创" scheme="https://yxuecheng.github.io/categories/%E5%89%8D%E7%AB%AF/%E5%8E%9F%E5%88%9B/"/>
     
     
-      <category term="smarty" scheme="https://yxuecheng.github.io/tags/smarty/"/>
-    
       <category term="ci" scheme="https://yxuecheng.github.io/tags/ci/"/>
+    
+      <category term="smarty" scheme="https://yxuecheng.github.io/tags/smarty/"/>
     
   </entry>
   
@@ -490,11 +490,11 @@ return {
       <category term="原创" scheme="https://yxuecheng.github.io/categories/%E5%89%8D%E7%AB%AF/%E5%8E%9F%E5%88%9B/"/>
     
     
+      <category term="smarty" scheme="https://yxuecheng.github.io/tags/smarty/"/>
+    
       <category term="fis3" scheme="https://yxuecheng.github.io/tags/fis3/"/>
     
       <category term="es6" scheme="https://yxuecheng.github.io/tags/es6/"/>
-    
-      <category term="smarty" scheme="https://yxuecheng.github.io/tags/smarty/"/>
     
   </entry>
   
